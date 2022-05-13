@@ -1,4 +1,5 @@
-﻿using WareHouseAPI.Interfaces;
+﻿using WareHouseAPI.Data.Entities;
+using WareHouseAPI.Interfaces;
 using WareHouseAPI.Model;
 
 namespace WareHouseAPI.Services;
@@ -14,6 +15,18 @@ public class WarehouseService : IWarehouseService
 
     public async Task<Warehouse> GetWarehouseForVehicleAsync(int vehicleWarehouseId)
     {
-        return await _warehouseRepository.GetWarehouseForVehicleAsync(vehicleWarehouseId);
+        return Map(await _warehouseRepository.GetWarehouseForVehicleAsync(vehicleWarehouseId));
+    }
+
+    private Warehouse Map(WarehouseDbo warehouse)
+    {
+        return new Warehouse
+        {
+            Id = warehouse.Id,
+            Lat = warehouse.Lat,
+            Location = warehouse.Location,
+            Long = warehouse.Long,
+            Name = warehouse.Name
+        };
     }
 }

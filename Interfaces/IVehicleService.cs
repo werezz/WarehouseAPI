@@ -4,6 +4,6 @@ namespace WareHouseAPI.Interfaces
 {
     public interface IVehicleService
     {
-        Task<List<Vehicle>> GetAllVehiclesAsync();
+        public Task<IEnumerable<Vehicle>> GetAllVehiclesAsync();
     }
 }

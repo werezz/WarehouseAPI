@@ -1,5 +1,6 @@
 ﻿using WareHouseAPI.Model;
 using WareHouseAPI.Interfaces;
+using WareHouseAPI.Data.Entities;
 
 namespace WareHouseAPI.Repository
 {
@@ -12,10 +13,15 @@ namespace WareHouseAPI.Repository
             _context = context;
         }
 
-        public async Task<Warehouse> GetWarehouseForVehicleAsync(int vehicleWarehouseId)
+        public async Task<WarehouseDbo> GetWarehouseForVehicleAsync(int vehicleWarehouseId)
         {
             var result = await _context.Warehouse.FirstOrDefaultAsync(x => x.Id == vehicleWarehouseId);
             return result;
+        }
+
+        public async Task<IEnumerable<WarehouseDbo>> FindAll()
+        {
+            return await _context.Warehouse.ToListAsync();
         }
     }
 }

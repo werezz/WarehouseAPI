@@ -1,6 +1,6 @@
-﻿namespace WareHouseAPI.Model
+﻿namespace WareHouseAPI.Data.Entities
 {
-    public class Vehicle
+    public class VehicleDbo
     {
         public int Id { get; set; }
         public string Make { get; set; } = null!;
@@ -10,6 +10,5 @@
         public string Licensed { get; set; } = null!;
         public DateTime DateAdded { get; set; }
         public int WarehouseId { get; set; }
-
     }
 }

@@ -1,5 +1,5 @@
-﻿using WareHouseAPI.Interfaces;
-using WareHouseAPI.Model;
+﻿using WareHouseAPI.Data.Entities;
+using WareHouseAPI.Interfaces;
 
 namespace WareHouseAPI.Data
 {
@@ -12,7 +12,7 @@ namespace WareHouseAPI.Data
             _context = context;
         }
 
-        public async Task<List<Vehicle>> GetAllVehiclesAsync()
+        public async Task<List<VehicleDbo>> GetAllVehiclesAsync()
         {
             var result = await _context.Vehicle.ToListAsync();
             return result;

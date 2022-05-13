@@ -59,3 +59,4 @@ C:\Users\Vartotojas\source\repos\WarehouseAPI\WareHouseAPI\obj\Debug\net6.0\ref\
 C:\Users\Vartotojas\source\repos\WarehouseAPI\WareHouseAPI\obj\Debug\net6.0\WareHouseAPI.pdb
 C:\Users\Vartotojas\source\repos\WarehouseAPI\WareHouseAPI\obj\Debug\net6.0\WareHouseAPI.genruntimeconfig.cache
 C:\Users\Vartotojas\source\repos\WarehouseAPI\WareHouseAPI\obj\Debug\net6.0\WareHouseAPI.csproj.AssemblyReference.cache
+C:\Users\Vartotojas\source\repos\WarehouseAPI\WareHouseAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -1,9 +1,9 @@
-﻿using WareHouseAPI.Model;
+﻿using WareHouseAPI.Data.Entities;
 
 namespace WareHouseAPI.Interfaces
 {
     public interface IWarehouseRepository
     {
-        Task<Warehouse> GetWarehouseForVehicleAsync(int  vehicleWarehouseId);
+        Task<WarehouseDbo> GetWarehouseForVehicleAsync(int  vehicleWarehouseId);
     }
 }
